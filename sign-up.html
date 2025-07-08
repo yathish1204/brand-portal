@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand-Portal</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/utility.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-7 login-bg p-0 d-none d-md-block">
+          <img src="assets/images/login-bg.png" alt="login-bg" />
+        </div>
+        <div
+          class="col-12 col-md-5 px-2 px-md-4 d-flex flex-column justify-content-center"
+        >
+          <div class="login-container">
+            <img
+              src="assets/images/brand-logo.png"
+              height="80"
+              alt="Brand Logo"
+            />
+            <div class="my-3">
+              <!-- <p class="m-0 text-muted fw-light">Hey, Welcome</p> -->
+              <p class="fs-3 text-dark">Register here</p>
+            </div>
+            <form action="#">
+              <div class="mb-3">
+                <label for="name" class="form-label required">Username</label>
+                <input
+                  class="form-control shadow-none"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="enterusername"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label required">Email</label>
+                <input
+                  class="form-control shadow-none"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="enter email"
+                />
+              </div>
+              <div class="mb-3 position-relative">
+                <label for="password" class="form-label required"
+                  >Password</label
+                >
+                <input
+                  class="form-control shadow-none"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="enter password"
+                  onclick="togglePassword(this)"
+                />
+                <i
+                  id="toggle-password"
+                  data-target="password"
+                  class="fa fa-solid fs-6 text-muted fa-eye"
+                ></i>
+              </div>
+              <div class="mb-3 position-relative">
+                <label for="confirmPassword" class="form-label required"
+                  >Confirm Password</label
+                >
+                <input
+                  class="form-control shadow-none"
+                  type="password"
+                  name="confirm-password"
+                  id="confirmPassword"
+                  placeholder="enter password Again"
+                  onclick="togglePassword(this)"
+                />
+                <i
+                  id="toggle-password"
+                  data-target="confirmPassword"
+                  class="fa fa-solid fs-6 text-muted fa-eye"
+                ></i>
+              </div>
+              <a href="login.html" class="btn btn-warning w-100">Sign Up</a>
+              <p class="my-3 text-right">
+                Already have an account?<a href="login.html" class="text-dark"
+                  ><strong>Signin</strong></a
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

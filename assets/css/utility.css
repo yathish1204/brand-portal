@@ -1,0 +1,18 @@
+.form-input{
+    outline: none;
+}
+
+.text-warning{
+    color:#FDBA33;
+}
+
+.btn-warning{
+    background-color: #FDBA33 !important;
+    color: #111;
+}
+
+
+.form-control:focus{
+    border: 1px solid #FDBA33 !important;
+}
+

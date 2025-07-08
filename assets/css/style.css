@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Regular */
+@font-face {
+    font-family: "Aptos";
+    src: url("/assets/fonts/Aptos.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Semibold */
+@font-face {
+    font-family: "Aptos";
+    src: url("/assets/fonts/Aptos-SemiBold.ttf") format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: "Aptos";
+    src: url("/assets/fonts/Aptos-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Black */
+@font-face {
+    font-family: "Aptos";
+    src: url("/assets/fonts/Aptos-Black.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+body,html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: 'Aptos', sans-serif !important;
+}
+
+
+/* Login Section */
+
+.login-bg{
+    height: 100vh;
+}
+
+.login-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#toggle-password{
+    position: absolute;
+    right: 8px;
+    top: 44px;
+}
+
+/* Login Section */
