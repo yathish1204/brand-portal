@@ -135,11 +135,120 @@ body{
     margin: 2rem auto;
 }
 
-.img-container img{
+.img-container div.img-card{
     width: 100%;
     height: 100%;
     display: inline-block;
-    margin-bottom: 0.5rem;
     border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
 }
+
+.img-card img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.download-btn{
+    position: absolute;
+    z-index: 12;
+    top: 8px;
+    right: 8px;
+    visibility: hidden;
+}
+
+.img-card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+    pointer-events: none;
+}
+
+.img-card:hover::after{
+    opacity: 0.3 !important;
+}
+
+.img-card:hover .download-btn{
+    visibility: visible;
+}
+
+
+/* Custom Download Button */
+
+.dropdown-btn{
+    padding: 0.25rem 0.5rem;
+    background-color: #eee;
+    color: var(--text-secondary);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: fit-content;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.dropdown-btn .label{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.v-rule{
+    height: 20px;
+    width: 1px;
+    background-color: #111;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 4px;
+    min-width: 120px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 12;
+}
+
+.dropdown-btn .icon img{
+    width: 14px;
+}
+
+.option{
+    padding: 6px 12px;
+    background-color:var(--bg-white);
+}
+
+.option:hover{
+    background-color: var(--bg-primary);
+}
+
+.download-icon{
+    /* opacity: 0; */
+    height: 24px;
+}
+
+.option:hover .download-icon{
+    opacity: 1;
+}
+/* Custom Download Button */
+
+
+@media screen and (max-width:638px) {
+    .img-container{
+        columns: 2 200px;
+        gap: 0.5rem;
+        margin: 2rem auto;
+    }
+}
+
 /* Images Section */
