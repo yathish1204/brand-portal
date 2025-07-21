@@ -6,12 +6,19 @@
     <title>Brand-Portal</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/utility.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-     <link
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css" /> -->
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -20,7 +27,7 @@
       class="container-fluid position-sticky top-0 align-self-start z-3 px-0"
     >
       <nav
-        class="navbar navbar-expand-md navbar-light bg-light justify-content-between"
+        class="navbar navbar-expand-md navbar-light bg-light justify-content-between flex-md-wrap"
       >
         <a href="/" class="navbar-brand mr-5 order-0 order-md-1"
           ><img src="assets/images/BarndLogo.png" height="32" alt="Brand Logo"
@@ -52,7 +59,9 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="#" class="nav-link text-nowrap">Brand Guidelines↗️</a>
+              <a href="#" class="nav-link text-nowrap text-dark fw-semibold"
+                >Brand Guidelines↗️</a
+              >
             </li>
             <li
               onclick="window.location.href='login.html'"
@@ -71,10 +80,10 @@
           class="btn-check"
           name="options"
           id="All"
+          checked
           autocomplete="off"
         />
-        <label 
-        onclick="window.location.href='all.html'" class="btn global-tab shadow-none" for="All">All</label>
+        <label class="btn global-tab shadow-none" for="All">All</label>
         <input
           type="radio"
           class="btn-check"
@@ -82,13 +91,17 @@
           id="Icon"
           autocomplete="off"
         />
-        <label class="btn global-tab shadow-none" onclick="window.location.href='icons.html'" for="Icon">Icon</label>
+        <label
+          onclick="window.location.href='icons.html'"
+          class="btn global-tab shadow-none"
+          for="Icon"
+          >Icon</label
+        >
         <input
           type="radio"
           class="btn-check"
           name="options"
           id="images"
-          checked
           autocomplete="off"
         />
         <label
@@ -129,54 +142,598 @@
 
     <!-- Main Content -->
     <main>
+      <section class="container-fluid px-2 px-md-4">
+        <div class="d-flex justify-content-between align-items-center my-3">
+          <div class="d-flex align-items-baseline gap-2">
+            <h2 class="m-0 fw-bold">Most Popular Icons</h2>
+          </div>
+          <a class="text-primary" href="icons.html">View All</a>
+        </div>
+        <div class="icon-grid">
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Arrow L.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Close.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Delete.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Edit.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Home.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Menu.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Plus.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Plus.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Search.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/View.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Arrow L.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Arrow L.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Arrow L.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Close.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Delete.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Edit.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Home.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Menu.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Plus.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Plus.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Search.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/View.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Arrow L.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+          <div class="icon-card">
+            <img
+              class="flex-shrink-0"
+              src="assets/images/svg/Arrow L.svg"
+              alt="Arrow Left"
+            />
+            <button
+              class="btn btn-png position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">PNG</span>
+            </button>
+            <button
+              class="btn btn-svg position-absolute d-flex bg-white border-1 rounded-1 justify-content-center shadow-none"
+            >
+              <img
+                src="assets/images/download (1).svg"
+                alt="Download icon"
+              /><span class="ml-1">SVG</span>
+            </button>
+            <p class="m-0">Arrow Left</p>
+          </div>
+        </div>
+      </section>
       <div class="d-flex justify-content-between align-items-center my-3 px-2 px-md-4">
           <div class="d-flex align-items-baseline gap-2">
             <h2 class="m-0 fw-bold">Images</h2>
             <p class="fw-lighter m-0">(1800 results)</p>
           </div>
-          <div class="d-flex gap-2 align-items-center">
-              <input
-                type="checkbox"
-                class="btn-check"
-                id="potrait"
-                autocomplete="off"
-              />
-              <label class="btn btn-sm filter-tab rounded-2 shadow-none" for="potrait">
-               
-                <span class="m-1">Potrait</span></label
-              >
-
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="landscape"
-              autocomplete="off"
-            />
-            <label class="btn btn-sm filter-tab rounded-2 shadow-none" for="landscape">
-             
-              <span class="m-1">Landscape</span></label
-            >
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="square"
-              autocomplete="off"
-            />
-            <label class="btn btn-sm filter-tab rounded-2 shadow-none" for="square">
-              
-              <span class="m-1">Square</span></label
-            >
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="recentlyAdded"
-              autocomplete="off"
-            />
-            <label class="btn btn-sm filter-tab rounded-2 shadow-none" for="recentlyAdded">
-              
-              <span class="m-1">Recently Added</span></label
-            >
-          </div>
+          <a href="images.html">View All</a>
         </div>
       <section class="img-container px-2 px-md-4">
 

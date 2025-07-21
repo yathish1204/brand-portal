@@ -1,297 +1,436 @@
-:root{
-    --text-secondary:#333;
-    --text-Primary:#111;
-    --bg-primary:#f5f5f5;
-    --bg-secondary:#f0f0f0;
-    --bg-white:#fff;
-    --trigent-yellow:#FDBA33;
-    --trigent-black:#000;
+:root {
+  --text-secondary: #333;
+  --text-Primary: #111;
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #f0f0f0;
+  --bg-white: #fff;
+  --trigent-yellow: #fdba33;
+  --trigent-orange: #F68D40;
+  --trigent-black: #000;
+  --icon-card-bg: #fafafa;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body,html{
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+body,
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-body{
-    min-height: 100vh;
-    min-height: 100dvh;
-    font-family: 'Aptos', sans-serif !important;
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: "Aptos", sans-serif !important;
 }
 
 /* Regular */
 @font-face {
-    font-family: "Aptos";
-    src: url("/assets/fonts/Aptos.ttf") format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Aptos";
+  src: url("/assets/fonts/Aptos.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Semibold */
 @font-face {
-    font-family: "Aptos";
-    src: url("/assets/fonts/Aptos-SemiBold.ttf") format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Aptos";
+  src: url("/assets/fonts/Aptos-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Bold */
 @font-face {
-    font-family: "Aptos";
-    src: url("/assets/fonts/Aptos-Bold.ttf") format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Aptos";
+  src: url("/assets/fonts/Aptos-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Black */
 @font-face {
-    font-family: "Aptos";
-    src: url("/assets/fonts/Aptos-Black.ttf") format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-
-
-
-/* Login Section */
-
-.login-bg{
-    height: 100vh;
-}
-
-.login-bg img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#toggle-password{
-    position: absolute;
-    right: 8px;
-    top: 44px;
+  font-family: "Aptos";
+  src: url("/assets/fonts/Aptos-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
 }
 
 /* Login Section */
 
+.login-bg {
+  height: 100vh;
+}
+
+.login-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#toggle-password {
+  position: absolute;
+  right: 8px;
+  top: 44px;
+}
+
+/* Login Section */
 
 /* Home screen */
 
-#search{
-    border-radius: 3rem;
-    height: 48px;
-    min-width: 250px;
+#search {
+  border-radius: 3rem;
+  height: 48px;
+  min-width: 250px;
 }
 
-.tabs-container{
-    margin: 0 auto;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+.tabs-container {
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.tab{
-    background-color: var(--bg-secondary);
-    color: var(--text-secondary);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    width: 100px;
-    text-align: center;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 4px 0px transparent;
-    user-select: none;
-    cursor: pointer;
+.tab {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100px;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 4px 0px transparent;
+  user-select: none;
+  cursor: pointer;
 }
 
-.tab:hover{
-    background-color: var(--bg-primary);
-    box-shadow: 0px 0px 4px 0px var(--trigent-yellow) ;
+.tab:hover {
+  background-color: var(--bg-primary);
+  box-shadow: 0px 0px 4px 0px var(--trigent-yellow);
 }
 
-.tab:active{
-    background-color: var(--bg-white);
+.tab:active {
+  background-color: var(--bg-white);
 }
-
 
 /* Home screen */
 
 /* Images Section */
-.img-container{
-    width: min(1400px,100%);
-    columns: 6 200px;
+.img-container {
+  width:100vw;
+  columns: 6 200px;
+  gap: 0.5rem;
+  margin: 1rem auto;
+}
+
+.img-container div.img-card {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 0.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.img-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.download-btn {
+  position: absolute;
+  z-index: 12;
+  top: 8px;
+  right: 8px;
+  visibility: hidden;
+}
+
+.img-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+  pointer-events: none;
+}
+
+.img-card:hover::after {
+  opacity: 0.3 !important;
+}
+
+.img-card:hover .download-btn {
+  visibility: visible;
+}
+
+/* Custom Download Button */
+
+.dropdown-btn {
+  padding: 0.25rem 0.5rem;
+  background-color: #eee;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: fit-content;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.dropdown-btn .label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.v-rule {
+  height: 20px;
+  width: 1px;
+  background-color: #111;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 4px;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-btn .icon img {
+  width: 14px;
+}
+
+.option {
+  padding: 6px 12px;
+  background-color: var(--bg-white);
+}
+
+.option:hover {
+  background-color: var(--bg-secondary);
+}
+
+.option:hover .download-icon {
+  opacity: 1;
+}
+/* Custom Download Button */
+
+@media screen and (max-width: 638px) {
+  .img-container {
+    width: 100vw;
+    columns: 2 200px;
     gap: 0.5rem;
     margin: 2rem auto;
+  }
 }
 
-.img-container div.img-card{
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    position: relative;
+/* Images Section */
+
+.btn-group {
+  top: 8px;
+  right: 8px;
+  z-index: 1055;
+  /* visibility: hidden; */
 }
 
-.img-card img{
-    width: 100%;
-    object-fit: cover;
+.dropdown-icon {
+  width: 16px;
 }
 
-.download-btn{
-    position: absolute;
-    z-index: 12;
-    top: 8px;
-    right: 8px;
-    visibility: hidden;
+.btn-group .button:last-child {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
 }
 
-.img-card::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    opacity: 0;
-    transition: opacity 0.1s ease-in;
-    pointer-events: none;
+.btn-group {
+  visibility: hidden;
 }
 
-.img-card:hover::after{
-    opacity: 0.3 !important;
+.img-card:hover .btn-group {
+  visibility: visible;
 }
 
-.img-card:hover .download-btn{
+.dropdown-menu {
+  min-width: 200px !important;
+  position: absolute;
+  z-index: 1000;
+  padding: 0.25rem !important;
+}
+
+.dropdown-menu li a span img.download-icon {
+  /* opacity: 0; */
+  width: 16px;
+}
+
+.dropdown-menu li a p {
+  font-size: 14px;
+}
+
+.dropdown-menu li a span {
+  flex-shrink: 0 !important;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
+
+.dropdown-menu li a:hover span {
+  opacity: 1;
+}
+
+/* .dropdown-menu li a:hover p{
+    font-weight: 600;
+} */
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 8px;
+  border-radius: 0.25rem;
+}
+
+.img-card:hover .btn-group {
+  visibility: visible;
+}
+
+/* Icons Section */
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #fafafa;
+  border-radius: 0.75rem;
+  height: 90px;
+  position: relative;
+  padding: 0 0.5rem;
+  overflow: hidden;
+}
+
+.icon-card:hover .btn-png {
+    top: 1.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
     visibility: visible;
+  }
+.icon-card:hover .btn-svg {
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    visibility: visible;
+  }
+
+.icon-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 0.25rem !important;
 }
 
+.btn-png,
+.btn-svg {
+  opacity: 95%;
+  width: calc(100% - 0.5rem) ;
+  font-size: 14px !important;
+  border: 1px solid #ddd !important;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out !important;
 
-/* Custom Download Button */
+  &.btn-png:hover,
+  &.btn-svg:hover {
+    opacity: 100%;
+    background-color: var(--bg-secondary) !important;
+  }
 
-.dropdown-btn{
-    padding: 0.25rem 0.5rem;
-    background-color: #eee;
+}
+
+.btn-png {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-svg {
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.filter-tab{
+    background-color: var(--bg-secondary);
+    padding: 1rem 2rem;
+    border: 1px solid #aaa !important;
     color: var(--text-secondary);
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    width: fit-content;
-    border-radius: 0.25rem;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-}
 
-.dropdown-btn .label{
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.v-rule{
-    height: 20px;
-    width: 1px;
-    background-color: #111;
-}
-
-.dropdown-menu{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-top: 4px;
-    min-width: 120px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 12;
-}
-
-.dropdown-btn .icon img{
-    width: 14px;
-}
-
-.option{
-    padding: 6px 12px;
-    background-color:var(--bg-white);
-}
-
-.option:hover{
-    background-color: var(--bg-primary);
-}
-
-
-
-.option:hover .download-icon{
-    opacity: 1;
-}
-/* Custom Download Button */
-
-
-@media screen and (max-width:638px) {
-    .img-container{
-        columns: 2 200px;
-        gap: 0.5rem;
-        margin: 2rem auto;
+    &:hover{
+        border: 1px solid var(--trigent-orange) !important;
     }
 }
 
-/* Images Section */
-
-
-
-.btn-group{
-    top: 8px;
-    right: 8px;
-    z-index: 12;
-    /* visibility: hidden; */
+.btn-check:checked + .filter-tab{
+    background-color: var(--trigent-orange) !important;
+    border: 1px solid transparent !important;
+    color: #fff;
 }
 
-.dropdown-icon{
-    width: 16px;
+.btn-check:checked + .filter-tab i{
+    color: var(--bg-white) !important;
 }
 
-
-.btn-group .button:last-child{
-    border-top-right-radius: 0.25rem !important; 
-    border-bottom-right-radius: 0.25rem !important; 
+.sub-navbar{
+    border-bottom: 1px solid #ddd;
 }
 
-.dropdown-menu{
-    min-width: 200px;
-    position: absolute;
-    z-index: 1000;
+.sub-navbar::-webkit-scrollbar {
+    display: none;
 }
 
-.dropdown-menu li a span img.download-icon{
-    /* opacity: 0; */
-    width: 14px;
+.sub-navbar label{
+    margin-bottom: 0;
 }
 
-.dropdown-menu li a span{
-    flex-shrink: 0 !important;
+@media screen and (max-width: 768px) {
+    .sub-navbar {
+        overflow-x: auto;
+    }
+
 }
 
-.dropdown-menu li a{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 12px;
+.global-tab{
+    border-radius: 0 !important;
 }
 
-.img-card:hover .btn-group{
-    visibility: visible;
+.btn-check:checked + .global-tab{
+    border-bottom: 1px solid var(--trigent-orange) !important;
+    /* font-weight: 600; */
 }
+
+/* Icons Section */
 
