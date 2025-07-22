@@ -7,6 +7,7 @@
   --trigent-yellow: #fdba33;
   --trigent-orange: #F68D40;
   --trigent-black: #000;
+  --trigent-blue: #3055A9;
   --icon-card-bg: #fafafa;
 }
 
@@ -328,7 +329,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   background-color: #fafafa;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   height: 90px;
   position: relative;
   padding: 0 0.5rem;
@@ -425,12 +426,134 @@ body {
 
 .global-tab{
     border-radius: 0 !important;
+    color: #777 !important;
+  &:hover{
+  background-color: var(--bg-secondary);
+  }
+  &:active{
+    background-color: #e0e0e0;
+  }
 }
+
 
 .btn-check:checked + .global-tab{
     border-bottom: 1px solid var(--trigent-orange) !important;
-    /* font-weight: 600; */
+    color: var(--text-Primary) !important;
 }
 
 /* Icons Section */
 
+
+/* All Section  */
+
+.text-link{
+  color: var(--trigent-blue);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  &:active{
+  background-color: var(--bg-primary);
+  }
+}
+
+.img-grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap:0.5rem;
+  height: 400px ;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.img-grid img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+#img1{
+  grid-column: 1;
+  grid-row: span 2;
+}
+#img2{
+  grid-column: 2;
+  grid-row: 1;
+}
+#img3{
+  grid-column: 3;
+  grid-row: 1;
+}
+#img4{
+  grid-column: 4;
+  grid-row: 1;
+}
+#img5{
+  grid-column: 2;
+  grid-row: 2;
+}
+#img6{
+  grid-column: 3;
+  grid-row: 2;
+}
+#img7{
+  grid-column: 4;
+  grid-row: 2;
+}
+
+@media (max-width: 1024px) {
+  /* Tablet: Stack into 2 columns */
+  .img-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  #img1 {
+    grid-column: span 2;
+    grid-row: auto;
+    height: 300px;
+  }
+
+  #img2, #img3, #img4, #img5, #img6, #img7 {
+    grid-column: span 1;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .img-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  #img1, #img2, #img3, #img4, #img5, #img6, #img7 {
+    grid-column: span 1;
+    height: 200px;
+  }
+}
+
+/* All Section  */
+
+/* PDF Page */
+
+.pdf-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.pdf-container .card{
+  flex-grow: 1;
+}
+
+.card .card-img-top{
+  height: 200px;
+}
+
+.card .card-body {
+  background-color: #eee;
+}
+
+/* PDF Page */

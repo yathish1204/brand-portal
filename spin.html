@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin-Test</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .loading-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f5f5f5;
+        width: fit-content;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        border-radius: 8px;
+      }
+
+      .loader {
+        margin-top: 1rem;
+        display: inline-block;
+        position: relative;
+        width: 70px;
+        height: 70px;
+      }
+
+      .spinner {
+        background: url("assets/images/eep-logo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 70px;
+        height: 70px;
+        position: relative;
+        animation: spin 1.5s linear infinite;
+      }
+
+      .pulse {
+        background: rgba(18, 152, 209, 0.3);
+        border-radius: 50%;
+        height: 14px;
+        width: 14px;
+        position: absolute;
+        top: 90%;
+        left: 40%;
+        transform: rotateX(55deg);
+      }
+
+      .pulse::after {
+        content: "";
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        margin: -13px 0 0 -13px;
+        animation: pulsate 1.5s linear infinite;
+        opacity: 0;
+        box-shadow: 0 0 1px 2px #0e587b;
+      }
+
+      @keyframes pulsate {
+        0% {
+          opacity: 0;
+          transform: scale(0.1);
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1.15);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(359deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div
+        class="d-flex flex-column justify-content-center align-content-center vh-100"
+      >
+        <h1>Epp Loader</h1>
+        <div
+          class="loading-modal d-flex flex-column justify-content-center align-items-center mx-auto bg-danger p-3 rounded-2"
+        >
+          <!-- Spinner Code -->
+          <div class="loader my-3">
+            <div class="spinner z-1"></div>
+            <div class="pulse"></div>
+          </div>
+          <!-- Spinner Code -->
+
+          <p class="mb-0">Loading...please wait</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
